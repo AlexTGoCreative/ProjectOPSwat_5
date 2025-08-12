@@ -22,37 +22,42 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white dark:bg-gray-900 shadow-lg transition-colors duration-200">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <header className="bg-white/95 dark:bg-slate-900/95 backdrop-blur-sm shadow-sm border-b border-slate-200 dark:border-slate-700 sticky top-0 z-50 transition-all duration-300">
+      <div className="container-width">
         <div className="flex justify-between items-center py-6">
           <div className="flex items-center space-x-4">
-            <div className="flex items-center space-x-3">
-              <img 
-                src="/profile.jpg" 
-                alt="Alexandru Tulbure" 
-                className="w-10 h-10 rounded-full object-cover border-2 border-gray-200 dark:border-gray-600"
-              />
-              <Link to="/" className="text-2xl font-bold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+            <div className="flex items-center space-x-4">
+              <div className="relative">
+                <img 
+                  src="/profile.jpg" 
+                  alt="Alexandru Tulbure" 
+                  className="w-12 h-12 rounded-full object-cover border-3 border-slate-200 dark:border-slate-600 shadow-md"
+                />
+              </div>
+              <Link to="/" className="text-2xl font-bold text-gradient hover:opacity-80 transition-opacity">
                 Alexandru Tulbure
               </Link>
             </div>
           </div>
           
           <nav className="hidden md:flex space-x-8">
-            <Link to="/" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+            <Link to="/" className="text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100 font-medium transition-colors duration-200 relative group">
               Home
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-slate-800 dark:bg-slate-200 group-hover:w-full transition-all duration-300"></span>
             </Link>
-            <Link to="/projects" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+            <Link to="/projects" className="text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100 font-medium transition-colors duration-200 relative group">
               Projects
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-slate-800 dark:bg-slate-200 group-hover:w-full transition-all duration-300"></span>
             </Link>
-            <Link to="/contact" className="text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+            <Link to="/contact" className="text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100 font-medium transition-colors duration-200 relative group">
               Contact
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-slate-800 dark:bg-slate-200 group-hover:w-full transition-all duration-300"></span>
             </Link>
           </nav>
 
           <button
             onClick={toggleTheme}
-            className="p-2 rounded-lg bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
+            className="p-3 rounded-lg bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-slate-100 transition-all duration-200 shadow-sm hover:shadow-md"
             aria-label="Toggle theme"
           >
             {isDark ? (

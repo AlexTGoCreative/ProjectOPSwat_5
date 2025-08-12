@@ -1,9 +1,11 @@
 const Footer = () => {
   return (
-    <footer className="bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700 transition-colors duration-200">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div className="text-center text-gray-600 dark:text-gray-400">
-          <p>&copy; 2024 Alexandru Tulbure. All rights reserved.</p>
+    <footer className="bg-white dark:bg-slate-800 border-t border-slate-200 dark:border-slate-700 transition-all duration-300">
+      <div className="container-width py-12">
+        <div className="text-center">          
+          <div className="text-slate-500 dark:text-slate-500 font-light">
+            <p>&copy; 2025 Alexandru Tulbure. All rights reserved.</p>
+          </div>
         </div>
       </div>
     </footer>

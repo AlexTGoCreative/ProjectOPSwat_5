@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Home = () => {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-900 dark:to-slate-800 transition-all duration-300">
@@ -31,21 +33,19 @@ const Home = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <a
-                href="/projects"
+               <Link to="/projects"
                 className="btn-primary inline-flex items-center"
               >
                 View My Work
                 <svg className="ml-3 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                 </svg>
-              </a>
-              <a
-                href="/contact"
+              </Link>
+              <Link to="/contact"
                 className="btn-secondary inline-flex items-center"
               >
                 Get In Touch
-              </a>
+              </Link>
             </div>
           </div>
         </div>
